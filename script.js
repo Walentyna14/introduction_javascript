@@ -1,13 +1,20 @@
 var Select = document.getElementsByTagName('select');
 var elem = document.getElementById('container');
+var change = document.getElementById('change');
 
-function styles(){
-	var style = this.id;
-	var value = this.value;
-	
-	elem.style[style] = value;
+function styles(event){
+	for( var i = 0; i < Select.length; i++ ){
+		var style = Select[i].id;
+		var value = Select[i].value;
+		
+		elem.style[style] = value;
+	}
+	event.stopPropagation();
 }
 
-for( var i = 0; i < Select.length; i++ ){
-	Select[i].addEventListener( 'change', styles );
-}
+
+change.addEventListener( 'change', styles , true);
+/*
+
+
+*/
