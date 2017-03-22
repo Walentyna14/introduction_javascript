@@ -1,4 +1,3 @@
-var Select = document.getElementsByTagName('select');
 var elem = document.getElementById('container');
 var change = document.getElementById('change');
 
